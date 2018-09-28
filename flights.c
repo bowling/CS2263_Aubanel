@@ -15,7 +15,7 @@ int main(){
   int departureTime;
   int desiredTime = d1*60 + d2;
 
-  findClosestTime(desiredTime, &departureTime, &arrivalTime);
+  findClosestFlight(desiredTime, &departureTime, &arrivalTime);
   
   num2 = departureTime % 60;
   num1 = departureTime / 60;
