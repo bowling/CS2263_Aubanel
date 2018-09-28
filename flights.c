@@ -4,12 +4,10 @@
 void findClosestFlight(int desiredTime, int *departureTime, int *arrivalTime);
 
 int main(){
-
+  int d1, d2;
   if(scanf("%d:%d", &d1, &d2) != 2){
 	return EXIT_FAILURE;
   }
-  FILE * f;
-  f = fopen("flights.dat","r");
 
   /* Timing Variables */
   int num1, num2, num3, num4;
@@ -38,7 +36,7 @@ void findClosestFlight(int desiredTime, int *departureTime, int *arrivalTime){
   int returnDepart;
 	
   FILE * fp = fopen("flights.dat","r");
-  while((fscanf("%d:%d", &num1, &num2) == 2) && (fscanf("%d:%d", &num3, &num4) == 2)){
+  while((fscanf(fp, "%d:%d", &num1, &num2) == 2) && (fscanf("%d:%d", &num3, &num4) == 2)){
 	departureTime = (num1*60) + num2;
 	arrivalTime = (num3*60) + num4;
 	
