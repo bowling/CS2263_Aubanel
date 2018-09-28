@@ -13,7 +13,7 @@ int main(){
   int num1, num2, num3, num4;
   int arrivalTime;
   int departureTime;
-  int desiredTime;
+  int desiredTime = d1*60 + d2;
 
   findClosestTime(desiredTime, &departureTime, &arrivalTime);
   
