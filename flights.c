@@ -10,16 +10,19 @@ int main(){
   }
 
   /* Timing Variables */
+  int num1, num2, num3, num4;
   int arrivalTime;
   int departureTime;
   int desiredTime;
+
+  int counter = 0;
   findClosestTime(desiredTime, &departureTime, &arrivalTime);
   
-  int num2 = departureTime % 60;
-  int num1 = departureTime / 60;
+  num2 = departureTime % 60;
+  num1 = departureTime / 60;
 	
-  int num4 = arrivalTime % 60;
-  int num3 = arrivalTime / 60;
+  num4 = arrivalTime % 60;
+  num3 = arrivalTime / 60;
 
   printf("The closest time to your desired time departs @ %d:%d and arrives at %d:%d", num2, num1, num4, num3);
 }
@@ -31,12 +34,11 @@ void findClosestFlight(int desiredTime, int *departureTime, int *arrivalTime){
   int minTime = 999999;
   int returnArrival;
   int returnDepart;
-  int num1, num2, num3, num4;
-  
+	
   FILE * fp = fopen("flights.dat","r");
-  while((fscanf(fp, "%d:%d", &num1, &num2) == 2) && (fscanf(fp, "%d:%d", &num3, &num4) == 2)){
-	departureTime = (num1*60) + num2;
-	arrivalTime = (num3*60) + num4;
+  while((fscanf(fp, "%d:%d", &num1, &num2) == 2) && (fscanf("%d:%d", &num3, &num4) == 2)){
+	*departureTime = (num1*60) + num2;
+	*arrivalTime = (num3*60) + num4;
 	
 	timeBetween = abs(desiredTime - departureTime);
 	if(timeBetween < minTime){
