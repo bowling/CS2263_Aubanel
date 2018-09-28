@@ -39,7 +39,7 @@ void findClosestFlight(int desiredTime, int *departureTime, int *arrivalTime){
 	*departureTime = (num1*60) + num2;
 	*arrivalTime = (num3*60) + num4;
 	
-	timeBetween = abs(desiredTime - departureTime);
+	timeBetween = abs(desiredTime - *departureTime);
 	if(timeBetween < minTime){
 		minTime = timeBetween;
 		returnDepart = *departureTime;
