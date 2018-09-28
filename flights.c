@@ -18,11 +18,11 @@ int main(){
   int counter = 0;
   findClosestTime(desiredTime, &departureTime, &arrivalTime);
   
-  num2 = departureTime % 60;
-  num1 = departureTime / 60;
+  int num2 = departureTime % 60;
+  int num1 = departureTime / 60;
 	
-  num4 = arrivalTime % 60;
-  num3 = arrivalTime / 60;
+  int num4 = arrivalTime % 60;
+  int num3 = arrivalTime / 60;
 
   printf("The closest time to your desired time departs @ %d:%d and arrives at %d:%d", num2, num1, num4, num3);
 }
