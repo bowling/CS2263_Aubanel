@@ -23,7 +23,22 @@ int main(){
   num4 = arrivalTime % 60;
   num3 = arrivalTime / 60;
 
-  printf("The closest time to your desired time departs @ %d:%d and arrives at %d:%d", num1, num2, num3, num4);
+  if(num1 < 10){
+   	String num01 = "0" + num1;
+  }
+  if(num2 < 10){
+  	String num02 = "0" + num2;
+  }
+  if(num3 < 10){
+  	String num03 = "0" + num3;
+  }
+  if(num4 < 10){
+  	String num04 = "0" + num4;
+  }
+  String numberFormatting1 = num01 + ":" + num02;
+  String numberFormatting2 = num03 + ":" + num04;
+
+  printf("The closest time to your desired time departs @ %s and arrives at %s", num1, num2, num3, num4);
 }
 
 void findClosestFlight(int desiredTime, int *departureTime, int *arrivalTime){
@@ -36,8 +51,6 @@ void findClosestFlight(int desiredTime, int *departureTime, int *arrivalTime){
   int num1, num2, num3, num4;
   FILE * fp = fopen("flights.dat","r");
   while((fscanf(fp, "%d:%d", &num1, &num2) == 2) && (fscanf(fp, "%d:%d", &num3, &num4) == 2)){
-	printf("\nTime 1: %d:%d", num1, num2);
-	printf("\nTime 2: %d:%d", num3, num4);
 	*departureTime = (num1*60) + num2;
 	*arrivalTime = (num3*60) + num4;
 	
