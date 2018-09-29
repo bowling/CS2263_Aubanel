@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#include <String.h>
 
 void findClosestFlight(int desiredTime, int *departureTime, int *arrivalTime);
 
