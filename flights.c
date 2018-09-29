@@ -23,7 +23,7 @@ int main(){
   num4 = arrivalTime % 60;
   num3 = arrivalTime / 60;
 
-  printf("The closest time to your desired time departs @ %d:%d and arrives at %d:%d", num2, num1, num4, num3);
+  printf("The closest time to your desired time departs @ %d:%d and arrives at %d:%d", num1, num2, num3, num4);
 }
 
 void findClosestFlight(int desiredTime, int *departureTime, int *arrivalTime){
