@@ -36,6 +36,8 @@ void findClosestFlight(int desiredTime, int *departureTime, int *arrivalTime){
   int num1, num2, num3, num4;
   FILE * fp = fopen("flights.dat","r");
   while((fscanf(fp, "%d:%d", &num1, &num2) == 2) && (fscanf(fp, "%d:%d", &num3, &num4) == 2)){
+	printf("\nTime 1: %d:%d", num1, num2);
+	printf("\nTime 2: %d:%d", num3, num4);
 	*departureTime = (num1*60) + num2;
 	*arrivalTime = (num3*60) + num4;
 	
