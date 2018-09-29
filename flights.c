@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 void findClosestFlight(int desiredTime, int *departureTime, int *arrivalTime);
 
@@ -38,7 +39,7 @@ int main(){
   String numberFormatting1 = num01 + ":" + num02;
   String numberFormatting2 = num03 + ":" + num04;
 
-  printf("The closest time to your desired time departs @ %s and arrives at %s", num1, num2, num3, num4);
+  printf("The closest time to your desired time departs @ %s and arrives at %s", numberFormatting1, numberFormatting2);
 }
 
 void findClosestFlight(int desiredTime, int *departureTime, int *arrivalTime){
