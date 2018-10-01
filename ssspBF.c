@@ -8,7 +8,7 @@ Date: September 2018
 #include <stdio.h>
 #include <limits.h>
 
-int readGraphWeighted(int n, int m, int graph[]);
+int readGraphWeighted(int n, int m, int graph[][]);
 
 int main(){
   int n, m;
