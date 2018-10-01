@@ -71,9 +71,9 @@ int main(){
   printf("\n");
 }
 
-int readGraphWeighted(int n, int m, int *graph){
+int readGraphWeighted(int n, int m, int **graph){
   for(int i=0; i<n; i++){
-      for(int j = 0; j < n; j++)
+      for(int j=0; j<n; j++)
 		graph[i][j] = 0;
   }
   
