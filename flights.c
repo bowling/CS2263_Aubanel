@@ -24,19 +24,19 @@ int main(){
   num3 = arrivalTime / 60;
 
   if(num1 < 10){
-   	char[3] num5 = "0" + num1 + '\0';
+   	char num5[3] = "0" + num1 + '\0';
   }
   if(num2 < 10){
-  	char[3] num6 = "0" + num2 + '\0';
+  	char num6[3] = "0" + num2 + '\0';
   }
   if(num3 < 10){
-  	char[3] num7 = "0" + num3 + '\0';
+  	charnum7[3]  = "0" + num3 + '\0';
   }
   if(num4 < 10){
-  	char[3] num8 = "0" + num4 + '\0';
+  	char num8[3] = "0" + num4 + '\0';
   }
-  char[12] numberFormatting1 = num5 + ":" + num6;
-  char[12] numberFormatting2 = num7 + ":" + num8;
+  char numberFormatting1[12] = num5 + ":" + num6;
+  char numberFormatting2[12] = num7 + ":" + num8;
 
   printf("The closest time to your desired time departs @ %s and arrives at %s", numberFormatting1, numberFormatting2);
 }
