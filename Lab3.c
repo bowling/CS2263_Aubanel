@@ -12,7 +12,7 @@ int main(){
 
 	int i = 0;
 	while(fscanf(w, "%s", arr1)==1){
-		printf("%s\n",arr1);
+		printf("%s\n",arr1[i]);
 		i++;
 	}
 
