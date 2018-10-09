@@ -11,8 +11,8 @@ int main(){
 	char arr1[size*50];
 
 	int i = 0;
-	while(fscanf(w, "%s", arr1)==1){
-		printf("%s\n",arr1[i]);
+	while(fscanf(w, "%s", arr1[i])==1){
+		printf("%s\n", arr1[i]);
 		i++;
 	}
 
