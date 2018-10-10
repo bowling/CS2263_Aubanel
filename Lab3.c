@@ -11,8 +11,10 @@ int main(){
 	char arr1[size*50];
 
 	int i = 0;
-	while(fscanf(w, "%s", arr1[i])==1){
-		printf("%s\n", arr1[i]);
+	
+	
+	while(fscanf(w, "%s", arr1)==1){
+		printf("%s\n", arr1);
 		i++;
 	}
 
@@ -53,16 +55,17 @@ int main(){
 			}
 		}
 	}
-for(int j = 0; j < size; j++){
-	for(int k = 0; k < size; k++){
-		printf("%d ", arr2[j][k]);
-	}
-	printf("\n");
+	for(int j = 0; j < size; j++){
+		for(int k = 0; k < size; k++){
+			printf("%d ", arr2[j][k]);
+		}
+		printf("\n");
 	}
 
-
-for(int j = 0; j < size; j++){
-		printf("%s\n", words[j]);
+	/*
+	for(int j = 0; j < size; j++){
+			printf("%s\n", words[j]);
 	}
 	printf("\n");
+	*/
 }
