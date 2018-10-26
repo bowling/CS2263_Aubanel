@@ -1,0 +1,13 @@
+12
+stack
+heap
+pointer
+variable
+array
+type
+function
+malloc
+file
+macro
+loop
+size
