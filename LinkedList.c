@@ -22,8 +22,8 @@ Words * addWord(Words *head, char* newWord){
 		Words * alpha = head;
 		while(alpha -> next != NULL && compare_words(ptr, alpha -> next) >= 0){
 			if(compare_words(ptr, alpha) == 0){
-				ptr -> freq += 1;
-				return ptr;
+				alpha -> freq += 1;
+				return alpha;
 			}
 			alpha = alpha -> next;
 		}
