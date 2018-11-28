@@ -40,6 +40,7 @@ Words * addWord(Words *head, char* newWord){
 		}
 		//Otherwise, we've met the conditions for insert. So insert. (not working?)
 	}
+	return head;
 }
 
 void printWords(Words * head){
