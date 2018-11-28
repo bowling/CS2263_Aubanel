@@ -20,13 +20,17 @@ Words * addWord(Words *head, char* newWord){
 	}
 	else{
 		Words * alpha = head;
+		//While compare is less than (or equal too), insert word.
 		while(alpha -> next != NULL && compare_words(ptr, alpha -> next) >= 0){
+			//if equal too, update freq and return head.
 			if(compare_words(ptr, alpha) == 0){
 				alpha -> freq += 1;
 				return head;
 			}
+			//otherwise, go to next node.
 			alpha = alpha -> next;
 		}
+		//Otherwise, we've met the conditions for insert. So insert.
 		ptr -> next = alpha;
 		alpha -> next = ptr;
 		return head;
