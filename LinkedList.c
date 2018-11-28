@@ -23,6 +23,7 @@ Words * addWord(Words *head, char* newWord){
 		while(alpha -> next != NULL && compare_words(ptr, alpha -> next) >= 0){
 			if(compare_words(ptr, alpha) == 0){
 				ptr -> freq += 1;
+				return head;
 			}
 			alpha = alpha -> next;
 		}
