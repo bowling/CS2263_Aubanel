@@ -21,19 +21,24 @@ Words * addWord(Words *head, char* newWord){
 	else{
 		Words * alpha = head;
 		//While compare is less than (or equal too), insert word.
-		while(alpha -> next != NULL && compare_words(ptr, alpha -> next) >= 0){
+		while(alpha -> next != NULL){
 			//if equal too, update freq and return head.
 			if(compare_words(ptr, alpha) == 0){
 				alpha -> freq += 1;
 				return head;
 			}
-			//otherwise, go to next node.
-			alpha = alpha -> next;
+			else if(compare_words(ptr, alpha -> next) > 0){
+				alpha = alpha -> next;
+				return head;
+			} 
+			else{
+				//otherwise, go to next node.
+				ptr -> next = alpha;
+				alpha -> next = ptr;
+				return head;
+			}
 		}
-		//Otherwise, we've met the conditions for insert. So insert.
-		ptr -> next = alpha;
-		alpha -> next = ptr;
-		return head;
+		//Otherwise, we've met the conditions for insert. So insert. (not working?)
 	}
 }
 
@@ -42,6 +47,9 @@ void printWords(Words * head){
   printf("\n=========================\n");
   printf("Printing the nodes now");
   printf("\n=========================\n");
+  if(head == NULL){
+	  printf("List is empty");
+  }
   while(head != NULL){
     printf("%s: %d\n", head -> word, head -> freq);
     head = head -> next;
